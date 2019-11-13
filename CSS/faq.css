@@ -1,0 +1,121 @@
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+ nav {
+            margin-bottom:40px;
+        }
+           
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    text-align: center;
+}
+
+        .d-flex {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            padding-bottom: 15px;
+            font-size: 3vw;
+        }
+
+        a {
+            color: #000;
+        }
+
+        
+
+        
+
+        .card-header {
+            width: 100%;
+        }
+        
+        .mb-0 {
+            text-align: left;
+            display: flex;
+            margin-bottom: 15px;
+            font-size: 2.5vw ;
+        }
+
+        .mb-0 > span {
+            flex: 8;
+        }
+        
+        .fa-1x {
+            flex:1 !important;
+            text-align: right;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: thin solid var(--primary-color);
+            transition: 0.25s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            opacity: 0.85;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: thin solid var(--secondary-color);
+            transition: 0.25s;
+        }
+        
+
+        .myaccordion {
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .img-fluid {
+            max-width: 100%; 
+            height: auto;
+        }
+
+    
+        
+        .myaccordion .card,
+        .myaccordion .card:last-child .card-header {
+            border: none;
+            margin-bottom: 15px;
+        }
+        
+        .myaccordion .card-header {
+            border-bottom-color: #EDEFF0;
+            background: transparent;
+        }
+        
+        .myaccordion .fa-stack {
+            font-size: 10px;
+        }
+        
+        .myaccordion .btn {
+            width: 100%;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0;
+        }
+        
+        .myaccordion .btn-link:hover,
+        .myaccordion .btn-link:focus {
+            text-decoration: none;
+        }
+        
+        .myaccordion li+li {
+            margin-bottom: 10px;
+        }
+      
