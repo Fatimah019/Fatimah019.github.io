@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="encoding"/>
+    <meta name="viewport"content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="le=edge"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="main.css">
+    <title>To-DO-APP</title>
+    <style>
+        
+        body{
+            margin:0 !important;
+            padding: 0 !important;
+            background-color:rgb(255, 255, 255, 0.4);
+        }
+        .col-add-list{
+            background-color:#6943D6;
+            text-align:center;
+        }
+        #time{
+            color:rgb(236, 203, 14);
+        }
+        .col-todo{
+            background-color:rgb(255, 255, 255, 0.8);
+            box-shadow: 4px 4px 20px 4px rgba(0, 0, 0, 0.25);
+            text-align:left;
+        }
+        #btn{
+            background-color:#6943D6;
+            color:white;
+        }
+       
+        li{
+            list-style-type: none;
+            color:#6943D6;
+            padding: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .checked{
+            color:green;
+            padding:10px;
+        }
+        .start-btn, .end-btn{
+            margin:30px;
+            width:100px;
+        }
+        .random-quotes{
+            text-align: center;
+            font-size:30px;
+        }
+        .close{
+            color:red;
+            
+        }
+        .start-date{
+            width:50px;
+        }
+        .progress{
+            float:center;
+            width:200px;
+        }
+        .progress-bar{
+            background-color:#6943D6;
+        }
+        /*transitions*/
+    @keyframes transit-quotes-2{
+        0%{transform: translatey(100%);}
+        40%{color:red;}
+        60%{color:purple;}
+        80%{color:gold;}
+        100%{color:green;}
+    }   
+    .rand-quotes{
+        animation: transit-quotes-2 1s ease-out; 
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+        animation-delay: 6s;
+        animation-direction:alternate;
+        animation-fill-mode: none;
+}
+
+#myModal{
+    display: none;
+}
+    </style>
+    </head>
+    <body>
+           
+            <div class="container">
+                <div class="container random-quotes mt-2" >
+                    <q  id="rand-quotes" class="rand-quotes">Our goals can only be reached through a vehicle of a plan, in which we must fervently believe, and upon which we must vigorously act. There is no other route to success.</q>    
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                    <div class="col-sm-12 col-add-list">
+                        <div class="digital-clock mt-5 pt-5">
+                            <h3 id="time"></h3>
+                            <h3 id="date"></h3>
+                            <input type="text" placeholder="Add Item" class="mt-5" id="input-task">
+                            <div><button class="mt-3" id="btn">Add Task</button></div>
+                            <button class="mt-3 start-btn" type="button" id="start-button" onclick="startdate()">START</button>
+                            <button class="mt-3 end-btn" id="end-button">END</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col col-todo"><span class="mt-3" style="float:right;"><img src="goaltrackerlogo.JPG" class="logo" style="width: 50px; display:none; height:50px; border-radius:50px;"></span>
+                        <h3 class="mt-2">My To-Do List</h3>
+                        <div class="progress mt-5">
+                            <div class="progress-bar progress-bar-striped" id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                            </div>
+                        </div>
+                            <span id="progressValue">20% Complete</span>
+                        <ul id="UList">
+                            <div class="row justify-content-center">
+                                <img src="goaltrackerlogo.JPG" style="width: 120px; height:120px; border-radius:50px; margin-top:50px;" id="img-logo" >
+                            </div>
+                        </ul>
+                        <button id="clearAll" class="mt-3" style="margin-bottom: 100px;">Clear All</button>
+                    </div>
+                </div>
+        </div>
+      
+    <!--add a pop up box for task description-->
+        <div id="myModal" class="modal fade" role="dialog" data-backdrop=false>
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Leave a Description for your task</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+            <div class="container">
+                <form>
+                    <textarea col="60" rows="10" placeholder="write here ..."></textarea>
+                </form>
+            </div><br/>
+        </div>
+            
+            </div>
+            </div>
+        </div>
+   
+        <button><a href="digicalculator.html">get calculator</a></button>
+         
+    <script>
+        //display date and time
+        function currenttime(){
+            var date_and_time=new Date();
+            var day=date_and_time.toLocaleDateString();
+            var hours=date_and_time.getHours();
+            var minutes=date_and_time.getMinutes();
+            var seconds=date_and_time.getSeconds();
+            document.getElementById("time").innerHTML=hours + ":" + minutes + ":" + seconds;
+            var hours_tick=((hours/12) *360);
+            var minutes_tick=((minutes/12)*360);
+            var second_tick=((seconds/12)*360)+360;
+            document.getElementById("date").innerHTML=day ;
+}
+
+    setInterval(currenttime, 1000);
+    //quotes generator
+    function genQuote(){
+            var quotes_list=[
+                    ["If you want to be happy, set a goal that commands your thoughts, liberates your energy and inspires your hopes."], 
+                    ["All who have accomplished great things have had a great aim, have fixed their gaze on a goal which was high, one which sometimes seemed impossible."], 
+                    ["Our goals can only be reached through a vehicle of a plan, in which we must fervently believe, and upon which we must vigorously act. There is no other route to success."],
+                    ["Success is the progressive realization of a worthy goal or ideal."],
+                    ["You have to set goals that are almost out of reach. If you set a goal that is attainable without much work or thought, you are stuck with something below your true talent and potential."],
+                    ["By recording your dreams and goals on paper, you set in motion the process of becoming the person you most want to be. Put your future in good hands—your own."],
+                    ["The trouble with not having a goal is that you can spend your life running up and down the field and never score."],
+                    ["One way to keep momentum going is to have constantly greater goals."],
+                    ["All successful people have a goal. No one can get anywhere unless he knows where he wants to go and what he wants to be or do."],
+                    ["Goals. There’s no telling what you can do when you get inspired by them. There’s no telling what you can do when you believe in them. And there’s no telling what will happen when you act upon them."],
+                    ["A goal properly set is halfway reached."],
+                    ["If you set goals and go after them with all the determination you can muster, your gifts will take you places that will amaze you."],
+                    ["I think goals should never be easy, they should force you to work, even if they are uncomfortable at the time."],
+                    ["You can do anything if you set goals. You just have to push yourself."],
+                    ["It’s important to set your own goals and work hard to achieve them."],
+                    ["You should set goals beyond your reach so you always have something to live for."],
+                    ["It must be borne in mind that the tragedy of life doesn’t lie in not reaching your goal. The tragedy lies in having no goals to reach."],
+                    ["The thing about goals is that living without them is a lot more fun, in the short run. It seems to me, though, that the people who get things done, who lead, who grow and who make an impact… those people have goals."]
+                ];
+               
+            var get_quotes=Math.floor(Math.random() * (quotes_list.length));
+            document.getElementById("rand-quotes").innerHTML=quotes_list[get_quotes];
+            function genQuote(){
+                for (var i=0; i<quotes_list; i++){
+                get_quotes.style.color=red;
+            }
+            }
+                }     
+          
+                setInterval(genQuote, 6000);  
+    </script>
+    <script>
+        //check a list 
+        var checklist=document.querySelector("ul");
+        var trackProgress=document.getElementById("progress");
+        checklist.addEventListener("click", function(ev){
+        if (ev.target.tagName==="LI"){
+            ev.target.classList.toggle("checked");
+           
+        }
+        else{
+            false;
+        }
+        for (var i=0; i<ListList.length; i++){
+            var trackProgress=document.getElementById("progress");
+             trackProgress.style.width="60%";
+        }
+    });
+    </script>
+    <script>
+    //create a close button
+        var ListList=document.getElementsByTagName("LI");
+        for (var i=0; i<ListList.length; i++){
+            var createClose=document.createElement("SPAN");
+            var closeAppend=document.createTextNode("\u00D7");
+            createClose.appendChild(closeAppend);
+            ListList[i].appendChild(createClose);
+
+            var createdescbtn=document.createElement("SPAN");
+            createdescbtn.setAttribute("type", "button");
+            ListList[i].appendChild(createdescbtn);
+
+            createClose.style.color="red";
+            createClose.style.float="right";     
+        }
+   
+        //append list
+        var buttonadd=document.getElementById("btn");
+        buttonadd.addEventListener("click", appendList)
+        function appendList(){
+            var createList=document.createElement("LI");
+            var inputValue=document.getElementById("input-task").value;
+            var listappend=document.createTextNode(inputValue);
+            createList.appendChild(listappend);
+            document.getElementById("UList").appendChild(createList);
+
+            if (inputValue === ""){
+                alert("Field cant be left empty");
+                ListList.style.display="none";
+                createClose.style.display="none";
+                createStartDate.style.display="none";
+        }
+            
+            else{
+                false;
+            }
+            //start date of tasks
+            var buttonStart=document.getElementById("start-button");
+            buttonStart.onclick=function(){
+                var labelStart=document.createElement("H6");
+                createList.appendChild(labelStart);
+                labelStart.textContent="Start Date";
+
+                var createStartDate=document.createElement("INPUT");  
+                createList.appendChild(createStartDate);
+
+                createStartDate.setAttribute("type", "date") ;
+                labelStart.style.color="green";
+            }
+
+            //finish date of tasks
+            var buttonEnd=document.getElementById("end-button");
+            buttonEnd.onclick=function(){
+                var labelEnd=document.createElement("H6");
+                createList.appendChild(labelEnd);
+                labelEnd.textContent="Finish Date";
+
+                var createEndDate=document.createElement("INPUT");  
+                createList.appendChild(createEndDate);
+
+                createEndDate.setAttribute("type", "date") ;
+                labelEnd.style.color="red";
+            }
+           
+                
+            
+            imageLogo=document.getElementById("img-logo");
+            document.getElementById("input-task").value="";
+            
+            var createClose=document.createElement("SPAN");
+            var closeAppend=document.createTextNode("\u00D7");
+            createClose.appendChild(closeAppend);
+            createList.appendChild(createClose);
+            createClose.onclick=function(){
+            var div= this.parentElement;
+            div.style.display="none";
+        }
+
+            createClose.style.color="red";
+            createClose.style.float="right";
+            imageLogo.style.display="none";
+        
+            var createdescbtn=document.createElement("SPAN");
+            createdescbtn.setAttribute("type", "button");
+            createdescbtn.textContent="Breakdown";
+            createList.appendChild(createdescbtn);
+            createdescbtn.style.fontSize="18px";
+            createdescbtn.style.color="black";
+            createdescbtn.style.float="right";
+            createdescbtn.style.marginRight="20px";
+            createdescbtn.style.borderColor="4px solid purple";
+            createdescbtn.onclick=function(e){
+                e.preventDefault();
+                var descarea=document.getElementById("myModal");
+                descarea.setAttribute("data-toggle", "modal");
+                descarea.setAttribute("data-target", "#myModal");
+                descarea.style.display="block";
+
+             
+                    $("#myModal").modal({backdrop:"static"});
+                     
+          
+           
+                
+            }
+           
+
+        var clearList=document.getElementById("clearAll");
+        clearList.onclick=function(){
+            var listtoclear=document.getElementsByTagName("li");
+            listtoclear.style.display="none";
+        }
+    }
+    </script>
+
+
+    </body>
+    </html>
+   
