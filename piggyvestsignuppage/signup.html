@@ -10,58 +10,67 @@
     <body>
         <!--root container-->
         <div class="root-container">
-            <!--logo section-->
-            <div class="top">
+            <!--piggy logo-->
+            <div class="piggy-logo">
                 <img src="https://dashboard.piggyvest.com/static/media/piggyvest-logo.0b78a8fa.svg" alt="Piggybank Logo">
             </div>
-            
             <!--form container-->
-            <div class="signup-container">
+            <div class="form-container">
+                <!--create account heading-->
                 <div class="header">
                     <h1>Create A Secure Account</h1>
                     <p>Welcome to the future of Savings & Investments</p>
                 </div>
+                <!--form-->
                 <div class="form">
-                    <form>
-                        <div class="name">
-                            <label>Full Name</label> <br/>
-                            <input type="text" placeholder="Full Name">
-                        </div>
-                        <div class="email">
-                            <label>Email Address</label> <br/>
-                            <input type="email" placeholder="Email Address">
-                        </div>
-                        <div class="phone">
-                            <label>Phone Number</label> <br/>
-                            <input type="tel" placeholder="Phone Number">
-                        </div>
-                        <div class="pass">
-                            <label>Password</label> <br/>
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <div class="review">
-                            <label>How did you hear about us?</label> <br/>
-                            <select>
-                                <option >Click To Select</option>
-                                <option>Facebook</option>
-                                <option>Twitter</option>
-                                <option>Instagram</option>
-                                <option>Friend/Family/CoWorker Referral</option>
-                                <option>Google search</option>
-                                <option>Google playstore</option>
-                                <option>Online Blog</option>
-                                <option>Local Newspaper</option>
-                                <option>At an event</option>
-                                <option>Order</option>
-                            </select>
-                        </div>
-                        <div class="submit">
-                            <input type="submit" value="CREATE ACCOUNT" id="submit">
-                        </div>
-                    </form>
-                </div>
+                        <form>
+                            <div class="name">
+                                <label>Full Name</label> <br/>
+                                <input type="text" placeholder="Full Name" name="name">
+                            </div>
+                            <div class="email">
+                                <label>Email Address</label> <br/>
+                                <input type="email" placeholder="Email Address" name="email">
+                            </div>
+                            <div class="phone">
+                                <label>Phone Number</label> <br/>
+                                <input type="tel" placeholder="Phone Number" name="phone">
+                            </div>
+                            <div class="pass">
+                                <label>Password</label> <br/>
+                                <input type="password" placeholder="Password" name="pass">
+                            </div>
+                            <div class="referrer">
+                                <label>Referrer code or Promo code (Optional)</label> <br/>
+                                <input type="tel" placeholder="Referrer phone or code" name="referrer">
+                            </div>
+                            <div class="review">
+                                <label>How did you hear about us?</label> <br/>
+                                <select>
+                                    <option>Click To Select</option>
+                                    <option>Facebook</option>
+                                    <option>Twitter</option>
+                                    <option>Instagram</option>
+                                    <option>Friend/Family/CoWorker Referral</option>
+                                    <option>Google search</option>
+                                    <option>Google playstore</option>
+                                    <option>Online Blog</option>
+                                    <option>Local Newspaper</option>
+                                    <option>At an event</option>
+                                    <option>Order</option>
+                                </select>
+                            </div>
+                            <div class="submit">
+                                <input type="submit" value="CREATE ACCOUNT" id="submit">
+                            </div>
+                        </form>
+                    </div>
             </div>
-            <div class="login"><a href="#">Already have an Account? Log in</a></div>
+              <!--already have an account/ login -->
+                    <div class="login">
+                        <p>Already have an Account? <a href="#"> Log in</a></p>
+                    </div>
         </div>
     </body>
 </html>
+
