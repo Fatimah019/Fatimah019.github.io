@@ -35,7 +35,7 @@ form div input{
 }   
 select{
     background-color: rgb(226, 229, 229); border-radius: 5px; padding:20px;font-size: 15px;width:100%;
-    outline:none; border-color: transparent;color:#4a5568;
+    outline:none; border-color: transparent;
 }
 #submit{background-color:#063c99; color:#ffffff; font-size:16px; padding:25px;
     border-radius: 10px 10px 10px 0px; outline:none; border-color: transparent;
@@ -43,9 +43,3 @@ select{
 }
 .login, .login a{color:#ffffff;}
 .login a{text-decoration: none; }
-
-@media screen and (max-width:400px){
-    form div input{
-        width:80%;
-    }
-}
