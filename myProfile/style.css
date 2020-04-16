@@ -90,6 +90,25 @@ progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
     flex-basis: 50%;
 }
 
+
+#bio-data, #socials{
+    animation-name: slide1;
+    animation-duration: 2s;
+    animation-delay: 0;
+}
+#story{
+    animation-name: slide2;
+    animation-duration: 2s;
+    animation-delay: 0;
+}
+/*Keyframes*/
+@keyframes slide1{
+    0%{transform: translateY(500px);}
+}
+@keyframes slide2{
+    0%{transform: translateY(-500px);}
+}
+
 /*media queries*/
 @media screen and (max-width:600px){
     .name-and-pic, .skills-and-exp, .about-me{
@@ -102,3 +121,5 @@ progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
         height:1000px;
     }
 }
+
+
