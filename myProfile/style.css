@@ -1,5 +1,5 @@
 body{
-    background-color: black; min-height:100vh;
+    background-color: black; min-height:100vh; margin:0; padding:0;
 }
 
 /* nav bar */
@@ -7,10 +7,13 @@ body{
     display:flex; flex-direction: row; width:100%;
 }
 #logo{
-    color:orangered; padding:20px 60px; flex-basis: 50%; font-size:20px;
+    color:orangered; font-size:20px; padding: 20px 0px 20px 30px;
 }
 #nav-list{
-    padding:30px;
+    padding:30px 0px 30px 30px;
+}
+#logo, #nav-list{
+    flex:1 1 0;
 }
 #nav-list ul{
     display:flex; flex-direction: row; list-style-type: none; 
@@ -23,16 +26,34 @@ body{
 }
 
 #nav-btn{
-    padding:10px; margin-top:35px; display: none;
+    padding:10px; margin-top:35px; display: none; position: relative;
 }
 #nav-btn i{
     color:#ffffff; padding:20px; background-color:orangered;
 }
 
+/*nav drop down */
+.nav-drop-down{
+    background-color:orangered;
+    position: absolute;
+    width: 100%; display: none;
+}
+.nav-drop-down #nav-list ul{
+    display: flex; flex-direction: column;
+}
+.nav-drop-down #nav-list ul li{
+    margin: 10px;
+}
+.nav-drop-down #nav-list ul li a { 
+    color:#000000; font-size: 25px;
+}
+#nav-btn:hover>.nav-drop-down{
+    display: block;
+}
 
 /* name and pic section*/
 .name-and-pic{
-    display: flex; flex-direction: row; min-height:600px; width:100%; margin:40px auto;
+    display: flex; flex-direction: row; width:100%; margin:40px auto; min-height:600px;
 }
 #sal, #cv-download{
     background-color:orangered; color:#ffffff; padding: 10px; text-align: center; width: 150px;
@@ -47,11 +68,11 @@ body{
     background-color:#0000; color:#ffffff; padding: 10px; text-align: center; border:1px solid white; width: 150px;
 }
 #my-name{
-    color:#ffffff; font-size:25px; margin:auto; margin-top:5%;
+    color:#ffffff; font-size:25px; margin:auto; margin-top:5%; padding-left:30px;
 }
 #my-photo{
-    background-image: url(https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg); background-position: 50% 30%;
-    background-size: 60% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
+    background-size: 80% 100%; flex-basis: 50%; background-repeat: no-repeat;
     background-blend-mode:overlay; margin:0;
 }
 
@@ -60,10 +81,7 @@ body{
     display: flex; flex-direction: row; margin: auto; color:#ffffff; width:100%;  font-size:20px;
 }
 #bio-data, #story, #socials{
-    flex-basis: 50%; padding:20px 10px;
-}
-#socials{
-    text-align: center;
+    flex-basis: 1 1 0;
 }
 
 #bio-data:hover, #socials:hover, #story:hover{
@@ -77,12 +95,12 @@ body{
     display: flex; flex-direction: row; text-align: center;
 }
 #b-cont{
-    display: flex; flex-direction: column;flex-basis: 50%;
+    display: flex; flex-direction: column;flex-basis: 1 1 0;
 }
 #breaks{
     height:100px;
     background-color:orangered; margin:10px; text-align: center;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 0% 75%, 0% 25%);
 }
 #clock{margin-top:30px; font-size: 40px;}
 #socials>a{
@@ -97,14 +115,15 @@ body{
     display: flex; flex-direction: row; width:100%; min-height:800px; color:#ffffff;
 }
 #exp-img{
-    background-image: url(https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg);
-    background-position: 50% 30%; background-size: 60% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-image: url("images/fatimah.jpg");
+    background-position: 50% 30%; background-size: 70% 100%; flex-basis: 50%; background-repeat: no-repeat;
     background-blend-mode:overlay; margin:auto; height:600px;
 }
 /*#exp-text{
     background-position: 50% 30%; background-size: 50% 100%;  font-size: 40px; width:200px;
     background-color: black; position: absolute;
 }*/
+
 #skills{
    padding:0px 40px; margin:auto
 }

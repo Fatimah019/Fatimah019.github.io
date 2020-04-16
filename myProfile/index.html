@@ -20,11 +20,23 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#interest">Interest</a></li>
                 <li><a href="#" id="hire">Hire Me</a></li>
-            </ul>
+                <li ><a href="#" id="works">About Me</a></li>
+            </ul>           
         </div>
         <div id="nav-btn">
             <i class="fa fa-angle-right">nav btn</i>
         </div>
+    </div>
+    <!--vav-list frop down-->
+    <div class="nav-drop-down">
+        <div id="nav-list">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#interest">Interest</a></li>
+                <li><a href="#" id="hire">Hire Me</a></li>
+                <li ><a href="#" id="works">About Me</a></li>
+            </ul>           
+        </div> 
     </div>
 
     <!--name an dpicture component-->
@@ -44,7 +56,50 @@
         <div id="my-photo"></div>
     </div>
 
-    <!--about me component-->
+    
+
+    <!--skills and experience-->
+    <div class="skills-and-exp">
+        <!--work experience -->
+        <div id="exp-img">
+            <!--<h3 id="exp-text">01 <br/>Year of <br/>Experience</h3>-->
+        </div>
+        <!--skills and proficiency-->
+        <div id="skills">
+            <h1>My skills and proficiency</h1>
+            <p>This are the skills i have acquired and the levels i have attained in each of them is shown</p>
+
+            <!--skills and levels-->
+            <h2>HTML</h2>
+            <progress value="90" max="100" id="html">Intermediate</progress>
+            <h2>CSS</h2>
+            <progress value="80" max="100" id="html">Intermediate</progress>
+            <h2>Javascript</h2>
+            <progress value="50" max="100" id="html">Intermediate</progress>
+            <h2>Node.js</h2>
+            <progress value="10" max="100" id="html">Beginner</progress>
+            <h2>Wordpress</h2>
+            <progress value="20" max="100" id="html">Beginner</progress>
+            <h2>Figma</h2>
+            <progress value="30" max="100" id="html">Beginner</progress>
+            <div class="cv-and-works">
+                <a href="#about-me" id="cv-download">Hire me</a>
+                <a href="#" id="works">About Me</a>
+            </div>
+        </div>
+    </div>
+    <!--contact form-->
+    <div class="contact-me">
+        <h3>You Like What you see ?</h3>
+        <p>I'm Always ready to engage you in business conversations</p>
+        <form action="">
+            <input type="email" placeholder="Email Address" id="email"><br/>
+            <input type="text" placeholder="Name/Company" id="name"><br/>
+            <textarea placeholder="Your message" rows=15 cols=54 id="text-area"></textarea><br/>
+            <button type="submit" id="btn-send"><i class="fa fa-envelope"></i> Hire Me</button>
+        </form>
+    </div>
+<!--about me component-->
     <div class="about-me" id="about-me">
         <div id="bio-data">
             <h1>Bio Data</h1>
@@ -85,49 +140,6 @@
             <a href=""><i class="fa fa-github">Fatimah Davies Omowonuola</i></a>
         </div>
     </div>
-
-    <!--skills and experience-->
-    <div class="skills-and-exp">
-        <!--work experience -->
-        <div id="exp-img">
-            <!--<h3 id="exp-text">01 <br/>Year of <br/>Experience</h3>-->
-        </div>
-        <!--skills and proficiency-->
-        <div id="skills">
-            <h1>My skills and proficiency</h1>
-            <p>This are the skills i have acquired and the levels i have attained in each of them is shown</p>
-
-            <!--skills and levels-->
-            <h2>HTML</h2>
-            <progress value="90" max="100" id="html">Intermediate</progress>
-            <h2>CSS</h2>
-            <progress value="80" max="100" id="html">Intermediate</progress>
-            <h2>Javascript</h2>
-            <progress value="50" max="100" id="html">Intermediate</progress>
-            <h2>Node.js</h2>
-            <progress value="10" max="100" id="html">Beginner</progress>
-            <h2>Wordpress</h2>
-            <progress value="20" max="100" id="html">Beginner</progress>
-            <h2>Figma</h2>
-            <progress value="30" max="100" id="html">Beginner</progress>
-            <div class="cv-and-works">
-                <a href="#about-me" id="cv-download">Hire me</a>
-                <a href="#" id="works">About Me</a>
-            </div>
-        </div>
-    </div>
-    <!--contact form-->
-    <div class="contact-me">
-        <h3>You Like What you see ?</h3>
-        <p>I'm Always ready to engage you in business conversations</p>
-        <form action="">
-            <input type="email" placeholder="Email Address" id="email"><br/>
-            <input type="text" placeholder="Name/Company" id="name"><br/>
-            <textarea placeholder="Your message" rows=15 cols=54 id="text-area"></textarea>
-            <button type="submit" id="btn-send"><i class="fa fa-envelope"></i> Hire Me</button>
-        </form>
-    </div>
-
 
 <script src="script.js"></script>
 </body>
