@@ -21,9 +21,7 @@ body{
 #nav-list ul li a:hover, #nav-list ul li a:active{
     background-color:orangered;
 }
-#nav-list ul li:nth-child(3){
-    background-color:orangered;
-}
+
 #nav-btn{
     padding:10px; margin-top:35px; display: none;
 }
@@ -34,27 +32,73 @@ body{
 
 /* name and pic section*/
 .name-and-pic{
-    display: flex; flex-direction: row; min-height:300px; width:100%;
+    display: flex; flex-direction: row; min-height:600px; width:100%; margin:40px 0px;
+}
+#sal, #cv-download{
+    background-color:orangered; color:#ffffff; padding: 10px; text-align: center; width: 150px;
+}
+.cv-and-works{
+    display: flex; flex-direction: row;
+}
+#cv-download, #works{
+    border-radius: 5px; margin:20px 20px 20px 0px;
+}
+#works{
+    background-color:#0000; color:#ffffff; padding: 10px; text-align: center; border:1px solid white;width: 150px;
 }
 #my-name{
-    color:#ffffff; font-size:25px; margin:auto;
+    color:#ffffff; font-size:25px; margin:auto; margin-top:5%;
 }
 #my-photo{
-    background-image: url('images/fatimah.jpg'); background-position: 50% 30%;
+    background-image: url(https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg); background-position: 50% 30%;
     background-size: 50% 100%; flex-basis: 50%; background-repeat: no-repeat;
     background-blend-mode:overlay; margin:0;
 }
 
+/*skills and experience*/
+.skills-and-exp{
+    display: flex; flex-direction: row; width:100%; min-height:800px; color:#ffffff;
+}
+#exp-img{
+    background-image: url(https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg);
+    background-position: 50% 30%; background-size: 50% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-blend-mode:overlay; margin:auto; height:600px;
+}
+/*#exp-text{
+    background-position: 50% 30%; background-size: 50% 100%;  font-size: 40px; width:200px;
+    background-color: black; position: absolute;
+}*/
+#skills{
+   padding:0px 40px; margin:auto
+}
+progress{
+    background-color:orangered;
+    width:100%;
+}
+progress::-webkit-progress-value{
+    background-color:orangered;
+}
+progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
+    border-radius: 20px;
+}
 
+/*about me*/
+.about-me{
+    display: flex; flex-direction: row; margin: auto; color:#ffffff; width:100%; padding:20px; font-size:20px;
+}
+#bio-data, #story, #socials{
+    flex-basis: 50%;
+}
 
 /*media queries*/
 @media screen and (max-width:600px){
-    .name-and-pic{
-        flex-direction: column; 
+    .name-and-pic, .skills-and-exp, .about-me{
+        display:flex; flex-direction: column; height:700px; 
     }
-    #my-photo{
-        background-image: url('images/fatimah.jpg'); background-position: 50% 30%;
-        background-size: cover; background-repeat: no-repeat;
-        background-blend-mode:overlay; margin:0;
+    #my-photo, #exp-img{
+        background-position: 70%; background-size: cover; margin:0;
+    }
+    .skills-and-exp{
+        height:1000px;
     }
 }
