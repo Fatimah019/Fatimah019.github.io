@@ -1,0 +1,133 @@
+body{
+    background-color:#000000;
+    min-height:100vh;
+    margin:0; padding:0;
+    color:#ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-header, nav ul{
+    display: flex; flex-direction: row;
+}
+.nav-header{
+  overflow: hidden;
+  background-color: rgb(70, 67, 67);
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+}  
+.nav-header h2{
+    margin:20px 0 0 40px; color:orangered;padding:20px;
+}
+nav{
+   margin:0 40px 0 auto;
+}
+nav ul{
+    padding: 10px;
+}
+nav ul li{
+    list-style-type: none; margin:0px 20px; padding:15px;
+}
+nav ul li:hover{
+    background-color: orangered; 
+}
+nav ul li a{
+    text-decoration: none; color:#ffffff; 
+}
+#nav-btn{
+    height:50px; width:50px; font-size: 30px; margin:20px 10px; display: none;
+}
+
+
+
+/*name and picture*/
+.name-and-pic{
+    display: flex; flex-direction: row; margin:140px auto 20px auto; width:100%;
+}
+#name{
+    flex-basis: 50%; justify-content: center;
+}
+
+#pic{
+    background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
+    background-size: 80% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-blend-mode:overlay; margin:0;
+}
+
+
+
+/*about me*/
+.about{
+    display: flex; flex-direction: row; margin:auto; 
+}
+#story, #values{
+    flex-basis: 50%;
+}
+#values{
+    text-align: center; 
+}
+#values i{
+    padding:0 10px;font-size: 80px; border-radius: 50%; border:2px solid white; height:100px; width:100px; text-align: center;
+}
+
+/*skills and experience*/
+.skills-and-exp{
+    display: flex; flex-direction: row;
+}
+#exp-img{
+    background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
+    background-size: 80% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-blend-mode:overlay; margin:0;
+}
+
+#skills{
+   padding:0px 40px; margin:auto
+}
+progress{
+    background-color:orangered;
+    width:100%;
+}
+progress::-webkit-progress-value{
+    background-color:orangered;
+}
+progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
+    border-radius: 20px;
+}
+
+
+/*contact page*/
+.contact-me{
+    color:#ffffff;  text-align: center;
+}
+form input, textarea, #btn-send{
+    width:65%; padding:10px; margin:20px 0px;
+}
+#email, #text-area, #name{
+    background-color: black; color:#ffffff; font-size:18px; outline: transparent;
+}
+#btn-send{
+    background-color: orangered; outline:none; border:transparent; border-radius: 10px; color:#ffffff;
+}
+
+@media screen and (max-width:600px){
+    .nav-header h2{
+        margin:20px 0 0 15px; padding:15px;
+    }
+    nav ul{
+        display: none;
+    }
+    #nav-btn{
+        display: inline;
+    }
+    #nav-btn:hover{
+       background-color: orangered;  
+    }
+    .name-and-pic, .skills-and-exp{
+        flex-direction: column; height:400px; margin-bottom: 0;
+    } 
+    .about{
+        flex-direction: column;
+    } 
+    .skills-and-exp{
+        height:1000px; margin-top:40px;
+    } 
+}

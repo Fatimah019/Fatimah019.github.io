@@ -7,10 +7,10 @@ body{
     display:flex; flex-direction: row; width:100%;
 }
 #logo{
-    color:orangered; font-size:20px; padding: 20px 0px 20px 30px;
+    color:orangered; font-size:20px;
 }
 #nav-list{
-    padding:30px 0px 30px 30px;
+
 }
 #logo, #nav-list{
     flex:1 1 0;
@@ -19,17 +19,17 @@ body{
     display:flex; flex-direction: row; list-style-type: none; 
 }
 #nav-list ul li a{
-    text-decoration: none; color:#ffffff; padding:15px 20px; 
+    text-decoration: none; color:#ffffff; 
 }
 #nav-list ul li a:hover, #nav-list ul li a:active{
     background-color:orangered;
 }
 
 #nav-btn{
-    padding:10px; margin-top:35px; display: none; position: relative;
+     margin-top:35px; display: none; position: relative;
 }
 #nav-btn i{
-    color:#ffffff; padding:20px; background-color:orangered;
+    color:#ffffff;  background-color:orangered;
 }
 
 /*nav drop down */
@@ -65,10 +65,10 @@ body{
     border-radius: 5px; margin:20px 20px 20px 0px;
 }
 #works{
-    background-color:#0000; color:#ffffff; padding: 10px; text-align: center; border:1px solid white; width: 150px;
+    background-color:#0000; color:#ffffff;  text-align: center; border:1px solid white; width: 150px;
 }
 #my-name{
-    color:#ffffff; font-size:25px; margin:auto; margin-top:5%; padding-left:30px;
+    color:#ffffff; font-size:25px; margin:auto; margin-top:5%;
 }
 #my-photo{
     background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
@@ -78,7 +78,7 @@ body{
 
 /*about me*/
 .about-me{
-    display: flex; flex-direction: row; margin: auto; color:#ffffff; width:100%;  font-size:20px;
+    display: flex; flex-direction: row; margin: auto; color:#ffffff;   font-size:20px;
 }
 #bio-data, #story, #socials{
     flex-basis: 1 1 0;
@@ -143,7 +143,7 @@ progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
     color:#ffffff;  text-align: center;
 }
 form input, textarea, #btn-send{
-    width:75%; padding:15px; margin:20px 0px;
+    width:75%; margin:20px 0px;
 }
 #email, #text-area, #name{
     background-color: black; color:#ffffff; font-size:18px; outline: transparent;
