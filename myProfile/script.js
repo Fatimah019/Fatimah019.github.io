@@ -10,9 +10,13 @@ let navBtn=document.querySelector("#nav-btn");
 navBtn.onclick=()=>{
     if (navList.style.display==="block"){
         navList.style.display="none";
+        navBtn.textContent="="
+        //navBtn.textContent=`${<i class="fa fa-bars"></i>}`;
     }
     else{
         navList.style.display="block";
+        navList.style.position="block";
+        navBtn.textContent="X"
     }
 }
 
