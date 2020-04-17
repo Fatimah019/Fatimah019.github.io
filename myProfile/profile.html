@@ -25,13 +25,17 @@
         <!--name an displaypicture component-->
         <div class="name-and-pic">
             <div id="name">
-                <p id="sal">Hi, I am</p>
-                <h3>Fatimah Davies</h3>
-                <p>A professional web developer</p>
-                <div class="cv-and-works">
-                    <div id="cv-download">Download CV</div>
-                    <div id="works">My Works</div>
+                <div>
+                    <h3>Hi, I am</h3>
+                    <h1>Fatimah Davies</h1>
+                    <p>A professional web developer</p>
                 </div>
+                
+                <div>
+                    <button id="cv">Download CV</button>
+                    <button id="hire-me"><a href="#contact">Hire Me</a></button>
+                </div>
+                
             </div>
             <div id="pic"></div>
         </div>
@@ -40,20 +44,23 @@
             <div id="story">
                 <p>
                     I am a web developer with a year experience. I'm a goal getter, always willing to
-                    put in more effort and below has been the things i pay attention to</p>
-                </p>
-                <h1>Bio Data</h1>
-                <h3>Address: <span>21, Akinadebowale street, off Pipeline, Ijegun Road, Ikotun Lagos, Nigeria.</span></h3>
-                <h3>Profession: <span>Web developer</span></h3>
-                <h3>Slack ID: <span>hhh</span></h3>
-                <h3>Date Of Birth: <span>19th January, 1997</span></h3> 
-                <h3>State Of Origin : <span>Lagos</span></h3>
+                    put in more effort and here you'd know the things we pay attention to <i class="fa fa-hand-left">ll</i>
+                </p><br/>
+                <div id="bio-data">
+                    <h1>Bio Data</h1>
+                    <h3>Address: <span>21, Akinadebowale street, off Pipeline, Ijegun Road, Ikotun Lagos, Nigeria.</span></h3>
+                    <h3>Profession: <span>Web developer</span></h3>
+                    <h3>Slack ID: <span>hhh</span></h3>
+                    <h3>Date Of Birth: <span>19th January, 1997</span></h3> 
+                    <h3>State Of Origin : <span>Lagos</span></h3>
+                </div>
+
             </div>
             <div id="values">
                 <p><i class="fa fa-mobile"></i></p>
-                <p>A very good looking website on desktop.</p>
+                <p>A very good looking website on desktop.</p><br/>
                 <p><i class="fa fa-laptop"></i></p>
-                <p>You dont need to worry about the outlook of our my work on mobile. I guarantee you a 100% mobile responsiveness of all web pages</p>
+                <p>You dont need to worry about the outlook of our my work on mobile. I guarantee you a 100% mobile responsiveness of all web pages</p><br/>
                 <p><i class="fa fa-mobile"></i></p>
                 <p>Timeliness: We keep to time always. we never disppoint our clients.</p>
             </div>
@@ -82,9 +89,9 @@
                 <progress value="20" max="100" id="html">Beginner</progress>
                 <h2>Figma</h2>
                 <progress value="30" max="100" id="html">Beginner</progress>
-                <div class="cv-and-works">
-                    <a href="#about-me" id="cv-download">Hire me</a>
-                    <a href="#" id="works">About Me</a>
+                <div>
+                    <button id="cv">Download CV</button>
+                    <button id="hire-me"><a href="#contact">Hire Me</a></button>
                 </div>
             </div>
         </div>
@@ -94,11 +101,25 @@
             <h3>You Like What you see ?</h3>
             <p>I'm Always ready to engage you in business conversations</p>
             <form action="">
-                <input type="email" placeholder="Email Address" id="email"><br/>
-                <input type="text" placeholder="Name/Company" id="name"><br/>
-                <textarea placeholder="Your message" rows=15 cols=54 id="text-area"></textarea><br/>
-                <button type="submit" id="btn-send"><i class="fa fa-envelope"></i> Hire Me</button>
+                <input type="email" placeholder="Email Address" id="email" name="email"><br/>
+                <input type="text" placeholder="Name/Company" id="name" name="name"><br/>
+                <textarea placeholder="Your message" rows=15 cols=54 id="text-area" id="message"></textarea><br/>
+                <button type="submit" id="btn-send"><i class="fa fa-envelope" name="send-msg-btn"></i> Hire Me</button>
             </form>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <footer>
+                <p>copyright @ Fatimah_Codes <span id="year">2020</span></p>
+                <p>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-phone"></i> +234-70-8878-0115</a>
+                </p>
+                <p>Ikotun Lagos, Nigeria</p>
+            </footer>
         </div>
     <script src="script.js"></script>
     </body>

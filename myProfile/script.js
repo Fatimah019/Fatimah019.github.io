@@ -16,4 +16,8 @@ navBtn.onclick=()=>{
     }
 }
 
+let yearFooter=document.querySelector("#year");
+getYearFooter=new Date();
+yearFooter=getYearFooter.getFullYear();
+
 
