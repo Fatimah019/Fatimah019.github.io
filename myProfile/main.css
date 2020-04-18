@@ -13,7 +13,7 @@ body{
   background-color: rgb(5, 5, 5);
   position: fixed;
   top: 0; 
-  width: 100%; 
+  width: 100%;  z-index: 99999;
   box-shadow: #ac8a8a;
 }  
 .nav-header h2{
@@ -95,7 +95,7 @@ nav ul li a{
     flex-basis: 50%; margin:40px 10px 0px 10px; 
 }
 #values{
-    text-align: center; 
+    text-align: center; margin:auto;
 }
 #values i{
     padding:10px;font-size: 70px; border-radius: 50%; border:2px solid rgb(172, 172, 11); text-align: center; height:75px; width:75px; 
