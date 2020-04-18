@@ -17,7 +17,7 @@ body{
   box-shadow: #ac8a8a;
 }  
 .nav-header h2{
-    margin:20px 0 0 40px; color:orangered; padding:20px;
+    margin:20px 0 0 40px; color:rgb(172, 172, 11); padding:20px;
 }
 #slack-id{color:#ffffff;}
 nav{
@@ -30,7 +30,7 @@ nav ul li{
     list-style-type: none; margin:0px 20px; padding:15px;
 }
 nav ul li:hover{
-    background-color: orangered; 
+    background-color: rgb(172, 172, 11); 
 }
 nav ul li a{
     text-decoration: none; color:#ffffff; 
@@ -43,7 +43,7 @@ nav ul li a{
 
 /*name and picture*/
 .name-and-pic{
-    display: flex; flex-direction: row; margin:140px 0 20px 0; min-height: 700px;
+    display: flex; flex-direction: row; margin:80px 0 20px 0; min-height: 700px;
 }
 #name{
     flex-basis: 50%; margin:auto; text-align: center; 
@@ -55,7 +55,7 @@ nav ul li a{
     padding:10px; border-radius: 5px; border:1px solid white; color:#ffffff; width:120px; margin:10px;
 }
 #cv{
-    background-color: orangered;
+    background-color: rgb(172, 172, 11);
 }
 #hire-me{
     background-color:black;
@@ -71,7 +71,7 @@ nav ul li a{
     background-color:#0000;
 }
 #cv-download{
-    background-color: orangered;
+    background-color: rgb(172, 172, 11);
 }
 #pic{
     background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
@@ -98,7 +98,7 @@ nav ul li a{
     text-align: center; 
 }
 #values i{
-    padding:10px;font-size: 70px; border-radius: 50%; border:2px solid orangered; text-align: center; height:75px; width:75px; 
+    padding:10px;font-size: 70px; border-radius: 50%; border:2px solid rgb(172, 172, 11); text-align: center; height:75px; width:75px; 
     animation: slide3 2s infinite;
 }
 
@@ -117,12 +117,12 @@ nav ul li a{
    animation: slide1 1s linear;
 }
 progress{
-    background-color:orangered;
+    background-color:rgb(172, 172, 11);
     width:100%;
     animation: slide5 4s infinite;
 }
 progress::-webkit-progress-value{
-    background-color:orangered;
+    background-color:rgb(172, 172, 11);
 }
 progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
     border-radius: 20px;
@@ -146,7 +146,7 @@ textarea{
     background-color: black; color:#ffffff; font-size:18px; outline: transparent;
 }
 #btn-send{
-    background-color: orangered; outline:none; border:transparent; border-radius: 10px; color:#ffffff;
+    background-color: rgb(172, 172, 11); outline:none; border:transparent; border-radius: 10px; color:#ffffff; font-size: 20px;
 }
 
 
@@ -172,7 +172,7 @@ footer p a{
         display: inline;
     }
     #nav-btn:hover{
-       background-color: orangered;  
+       background-color: rgb(169, 243, 21);  
     }
     .name-and-pic, .skills-and-exp{
         flex-direction: column; height:400px; margin-bottom: 40px;
