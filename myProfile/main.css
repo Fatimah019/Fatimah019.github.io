@@ -198,13 +198,15 @@ footer p a{
     0%{transform: translateX(-200px);}
 }
 @keyframes slide3{
-    0%{transform: translateY(20px);}
-    50%{transform: translateY(-20px);}
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(20px);}
+    100%{transform: translateY(0px);}
 }
 @keyframes slide4{
     0%{transform: translateY(150px);}
 }
 @keyframes slide5{
-    0%{transform: translateX(20px);}
-    50%{transform: translateX(-20px);}
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(0px);}
 }
