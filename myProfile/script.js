@@ -14,24 +14,50 @@ navBtn.onclick=()=>{
 }
 
 let arrayOfImages=[
-    "images/fatimah.jpg",
-    "images/computer.jpg"
+    "images/techterms.png",
+    "images/calculator.png",
+    "images/todo.png"
 ];
 
-let showWorks=document.getElementById("works");
+let siteLinks=[
+    "https://fatimahdavies.netlify.com/myrealportfolio.html",
+    "https://fatimahdavieswebdeveloper.netlify.com/technologyterms.html",
+    "https://fatimahdavies.netlify.com/calculator/calculator.html",
+    "https://fatimahdavies.netlify.com/TodoList/todolist.html"
+]
+
+let showWorks=document.querySelector("#works");
+let index=0;
 const showRandomImages=()=>{
-    for (let i=0; i<arrayOfImages.length; i++){
-        if (i=1){
-            showWorks.style.backgroundImage="url("+ arrayOfImages[i++] +")";
-        }
-        else{
-            i+=1;
-        }
-    }
-    
+    showWorks.style.backgroundImage=`url(${arrayOfImages[index]})`;
+    index++;
+    if (index==arrayOfImages.length){
+        index=0;
+    } 
 }
 
 setInterval(showRandomImages, 3000);
+
+let  viewSites=document.querySelector("#view-site-btn");
+let  prev=document.querySelector("#left");
+let  next=document.querySelector("#right");
+let siteIndex=0;
+const showLinkToSite=()=>{
+    siteIndex++;
+    if(siteIndex==siteLinks.length){
+        siteIndex=0;
+    }
+}
+setInterval(showLinkToSite, 4000);
+const showPrev=()=>{
+    siteIndex--;
+    if(siteIndex==siteLinks.length){
+        siteIndex=0;
+    }
+}
+const showSites=()=>{
+    location.href=siteLinks[siteIndex];
+}
 
 
 

@@ -36,9 +36,6 @@ nav ul li:hover{
 nav ul li a{
     text-decoration: none; color:#ffffff; 
 }
-#nav-btn{
-    height:50px; width:50px; font-size: 30px; margin:20px 10px; display: none;
-}
 
 
 
@@ -84,13 +81,9 @@ nav ul li a{
 
 /*about me*/
 .about{
-    display: flex; flex-direction: row; margin-bottom: 50px; min-height:40px;
-    background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
-    background-size: cover; scroll-behavior: smooth; 
+    display: flex; flex-direction: row; margin-bottom: 50px; 
 }
-.about:hover{
-    animation: slide2 2s linear;
-}
+
 #story{
     padding:25px; 
 }
@@ -135,6 +128,24 @@ progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
 }
 
 
+/*past works*/
+.past-works{
+    text-align: center; margin:20px 40px; font-size:22px;
+}
+#works{
+    background-image: url("images/myportfolio.png");  height:300px; 
+    background-repeat: no-repeat; background-size: cover;
+    background-position: 50% 50%; display: flex;
+}
+#view-site-btn{
+    margin:auto; font-size: 18px; color:#ffffff; border-radius: 20px;
+    padding:20px; background-color:#181717;
+}
+#left, #right{
+    font-size:40px; margin:auto; background-color: #181717;
+    border-radius: 100%; padding:20px; height:10px; width:10px; 
+}
+
 /*contact page*/
 .contact-me{
     color:#ffffff;  text-align: center;
@@ -162,24 +173,26 @@ textarea{
 footer{
     text-align: center;
     background-color:rgb(3, 3, 3);
-    font-size: 20px; padding:10px;
+    font-size: 18px; padding:10px;
 }
 footer p a{
     text-decoration: none; color:#ffffff; font-size:22px; margin:0px 10px;
 }
 @media screen and (max-width:600px){
+    .nav-header{
+        flex-direction: column;
+        text-align: center;
+    }
     .nav-header h2{
         margin:20px 0 0 15px; padding:15px;
     }
-    nav ul{
-        display: none;
-    }
-    #nav-btn{
-        display: inline;
-    }
-    #nav-btn:hover{
-       background-color: rgb(169, 243, 21);  
-    }
+    
+     nav ul{
+         padding: 5px;
+     }
+     nav ul li{
+         list-style-type: none; margin:0px 20px; padding:15px;
+     }
     .name-and-pic, .skills-and-exp{
         flex-direction: column; height:400px; margin-bottom: 40px;
     } 
@@ -194,7 +207,15 @@ footer p a{
         height:1000px; margin-top:40px;
     } 
 }
+@media screen and(max-width:300px){
+    nav{
+        margin:0;
+     }
+     nav ul{
+         padding: 0;
+     }
 
+}
 
 /*keyframes*/
 @keyframes slide1{

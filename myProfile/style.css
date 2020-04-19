@@ -7,10 +7,10 @@ body{
     display:flex; flex-direction: row; width:100%;
 }
 #logo{
-    color:orangered; font-size:20px;
+    color:orangered; font-size:20px; padding: 20px 0px 20px 30px;
 }
 #nav-list{
-
+    padding:30px 0px 30px 30px;
 }
 #logo, #nav-list{
     flex:1 1 0;
@@ -19,17 +19,17 @@ body{
     display:flex; flex-direction: row; list-style-type: none; 
 }
 #nav-list ul li a{
-    text-decoration: none; color:#ffffff; 
+    text-decoration: none; color:#ffffff; padding:15px 20px; 
 }
 #nav-list ul li a:hover, #nav-list ul li a:active{
     background-color:orangered;
 }
 
 #nav-btn{
-     margin-top:35px; display: none; position: relative;
+    padding:10px; margin-top:35px; display: none; position: relative;
 }
 #nav-btn i{
-    color:#ffffff;  background-color:orangered;
+    color:#ffffff; padding:20px; background-color:orangered;
 }
 
 /*nav drop down */
@@ -65,10 +65,10 @@ body{
     border-radius: 5px; margin:20px 20px 20px 0px;
 }
 #works{
-    background-color:#0000; color:#ffffff;  text-align: center; border:1px solid white; width: 150px;
+    background-color:#0000; color:#ffffff; padding: 10px; text-align: center; border:1px solid white; width: 150px;
 }
 #my-name{
-    color:#ffffff; font-size:25px; margin:auto; margin-top:5%;
+    color:#ffffff; font-size:25px; margin:auto; margin-top:5%; padding-left:30px;
 }
 #my-photo{
     background-image: url("images/fatimah.jpg"); background-position: 50% 50%;
@@ -78,7 +78,7 @@ body{
 
 /*about me*/
 .about-me{
-    display: flex; flex-direction: row; margin: auto; color:#ffffff;   font-size:20px;
+    display: flex; flex-direction: row; margin: auto; color:#ffffff; padding:20px;  font-size:20px;
 }
 #bio-data, #story, #socials{
     flex-basis: 1 1 0;
@@ -143,7 +143,7 @@ progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
     color:#ffffff;  text-align: center;
 }
 form input, textarea, #btn-send{
-    width:75%; margin:20px 0px;
+    width:75%; padding:15px; margin:20px 0px;
 }
 #email, #text-area, #name{
     background-color: black; color:#ffffff; font-size:18px; outline: transparent;
@@ -175,4 +175,70 @@ form input, textarea, #btn-send{
     }
 }
 
+
+
+body{
+    background-image:url('images/portfolioimage.jpg');
+    background-position: 100% 5%; min-height:100vh;
+    background-repeat: no-repeat; 
+    background-color: rgb(49, 46, 46);
+    background-blend-mode:overlay;
+    margin:0; padding:0;
+}
+.socials p a, body, .other-info  p a  {
+    color:#ffffff;
+}
+.scroll, .menu{
+    display:flex; flex-direction: row;
+}
+.socials, .about{
+    display: flex; flex-direction: column;justify-content: center;
+}
+.scroll{
+    height: 100vh; overflow-y:auto; overflow-x:hidden; padding:0; margin:0;
+}
+.socials{
+    width:35%; /*background-image: url(images/404page.png);
+    background-position: 50% 5%;
+    background-repeat: no-repeat;*/
+}
+.fa-facebook, .fa-twitter, .fa-instagram{
+    z-index: auto;
+}
+.about{
+    width:40%; padding:20px;
+}
+.socials p a, .other-info  p a{
+   text-decoration: none; padding:0px 40%;
+}
+.about h3{
+    font-size:50px; text-align: center;
+}
+
+.other-info{
+    width:20%; text-align: center;
+}
+.other-info  p a {
+    padding:20px;
+}
+
+.contact-form{
+    margin-top:50%; 
+}
+form input, form textarea{
+    padding:7px; margin:10px 0px;
+    animation: contact-transit 5s;
+}
+
+@keyframes contact-transit{
+    0%{transform: translateX(300px);}
+}
+
+.work-display{
+    animation: work-display 5s;
+}
+
+@keyframes work-display{
+    0%{transform: translateX(-300px);}
+}
 
