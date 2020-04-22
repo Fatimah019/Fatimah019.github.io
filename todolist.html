@@ -12,7 +12,299 @@
     <link  rel="stylesheet" href="main.css">
     <title>To-DO-APP</title>
     <style>
-        
+        body{
+    background-color: black; min-height:100vh;
+}
+
+/* nav bar */
+.nav-bar{
+    display:flex; flex-direction: row; width:100%;
+}
+#logo{
+    color:orangered; padding:20px 60px; flex-basis: 50%; font-size:20px;
+}
+#nav-list{
+    padding:30px;
+}
+#nav-list ul{
+    display:flex; flex-direction: row; list-style-type: none; 
+}
+#nav-list ul li a{
+    text-decoration: none; color:#ffffff; padding:15px 20px; 
+}
+#nav-list ul li a:hover, #nav-list ul li a:active{
+    background-color:orangered;
+}
+
+#nav-btn{
+    padding:10px; margin-top:35px; display: none;
+}
+#nav-btn i{
+    color:#ffffff; padding:20px; background-color:orangered;
+}
+
+
+/* name and pic section*/
+.name-and-pic{
+    display: flex; flex-direction: row; min-height:600px; width:100%; margin:40px auto;
+}
+#sal, #cv-download{
+    background-color:orangered; color:#ffffff; padding: 10px; text-align: center; width: 150px;
+}
+.cv-and-works{
+    display: flex; flex-direction: row;
+}
+#cv-download, #works{
+    border-radius: 5px; margin:20px 20px 20px 0px;
+}
+#works{
+    background-color:#0000; color:#ffffff; padding: 10px; text-align: center; border:1px solid white; width: 150px;
+}
+#my-name{
+    color:#ffffff; font-size:25px; margin:auto; margin-top:5%;
+}
+#my-photo{
+    background-image: url(https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg); background-position: 50% 30%;
+    background-size: 60% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-blend-mode:overlay; margin:0;
+}
+
+/*about me*/
+.about-me{
+    display: flex; flex-direction: row; margin: auto; color:#ffffff; width:100%;  font-size:20px;
+}
+#bio-data, #story, #socials{
+    flex-basis: 50%; padding:20px 10px;
+}
+#socials{
+    text-align: center;
+}
+
+#bio-data:hover, #socials:hover, #story:hover{
+    animation-name: slide1;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+#story-break{
+    display: flex; flex-direction: row; text-align: center;
+}
+#b-cont{
+    display: flex; flex-direction: column;flex-basis: 50%;
+}
+#breaks{
+    height:100px;
+    background-color:orangered; margin:10px; text-align: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+#clock{margin-top:30px; font-size: 40px;}
+#socials>a{
+    text-decoration: none; color:#ffffff; font-size:20px;
+}
+#socials>a>i{
+   margin:20px;
+}
+
+/*skills and experience*/
+.skills-and-exp{
+    display: flex; flex-direction: row; width:100%; min-height:800px; color:#ffffff;
+}
+#exp-img{
+    background-image: url(https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg);
+    background-position: 50% 30%; background-size: 60% 100%; flex-basis: 50%; background-repeat: no-repeat;
+    background-blend-mode:overlay; margin:auto; height:600px;
+}
+/*#exp-text{
+    background-position: 50% 30%; background-size: 50% 100%;  font-size: 40px; width:200px;
+    background-color: black; position: absolute;
+}*/
+#skills{
+   padding:0px 40px; margin:auto
+}
+progress{
+    background-color:orangered;
+    width:100%;
+}
+progress::-webkit-progress-value{
+    background-color:orangered;
+}
+progress, progress::-webkit-progress-bar, progress::-webkit-progress-value{
+    border-radius: 20px;
+}
+
+/*contact page*/
+.contact-me{
+    color:#ffffff;  text-align: center;
+}
+form input, textarea, #btn-send{
+    width:75%; padding:15px; margin:20px 0px;
+}
+#email, #text-area, #name{
+    background-color: black; color:#ffffff; font-size:18px; outline: transparent;
+}
+#btn-send{
+    background-color: orangered; outline:none; border:transparent; border-radius: 10px; color:#ffffff;
+}
+/*Keyframes*/
+@keyframes slide1{
+    0%{transform: translateY(500px);}
+}
+@keyframes slide2{
+    0%{transform: translateY(-500px);}
+}
+
+/*media queries*/
+@media screen and (max-width:600px){
+    .name-and-pic, .skills-and-exp{
+        display:flex; flex-direction: column; height:700px; 
+    }
+    #my-photo, #exp-img{
+        background-position: 70%; background-size: cover; margin:0;
+    }
+    .skills-and-exp{
+        height:1000px;
+    }
+    .about-me, #story-break{
+        display: flex; flex-direction: column;
+    }
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="encoding"/>
+    <meta name="viewport"content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="le=edge"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="style.css">
+    <title>Fatimah | Davies | Omowonuola</title>
+</head>
+<body>
+    <!--nav bar-->
+    <div class="nav-bar">
+        <div id="logo">
+            <h3>CodieGirl <span>slack id</span></h3>
+        </div>
+        <div id="nav-list">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#interest">Interest</a></li>
+                <li><a href="#" id="hire">Hire Me</a></li>
+            </ul>
+        </div>
+        <div id="nav-btn">
+            <i class="fa fa-angle-right">nav btn</i>
+        </div>
+    </div>
+
+    <!--name an dpicture component-->
+    <div class="name-and-pic">
+        <!--name sect-->
+        <div id="my-name">
+            <div id="sal">Hello, I am</div>
+            <h1>Fatimah Davies</h1>
+            <p>A professional web developer</p>
+            <div class="cv-and-works">
+                <div id="cv-download">Download CV</div>
+                <div id="works">My Works</div>
+            </div>
+            
+        </div>
+        <!--pic sect-->
+        <div id="my-photo"></div>
+    </div>
+
+    <!--about me component-->
+    <div class="about-me" id="about-me">
+        <div id="bio-data">
+            <h1>Bio Data</h1>
+            <h3>Address: <span>21, Akinadebowale street, off Pipeline, Ijegun Road, Ikotun Lagos, Nigeria.</span></h3>
+            <h3>Profession: <span>Web developer</span></h3>
+            <h3>Slack ID: <span>hhh</span></h3>
+            <h3>Date Of Birth: <span>19th January, 1997</span></h3> 
+            <h3>State Of Origin : <span>Lagos</span></h3>
+        </div>
+        <div id="story">
+            <p>I am a web developer with a year experience. I'm a goal getter, always willing to put in more effort and below has been the things i pay attention to</p>
+            <div id="story-break">
+                <div id="b-cont">
+                    <div id="breaks">
+                        <i class="fa fa-laptop" id="clock"></i>
+                    </div>
+                    <p>A very good looking website on desktop.</p>
+                </div>
+                <div id="b-cont">
+                    <div id="breaks">
+                        <i class="fa fa-mobile" id="clock"></i>
+                    </div>
+                    <p>You dont need to worry about the outlook of our my work on mobile. I guarantee you a 100% mobile responsiveness of all web pages</p>
+                </div>
+                <div id="b-cont">
+                    <div id="breaks">
+                        <i class="fa fa-laptop" id="clock"></i>
+                    </div>
+                    <p>Timeliness: We keep to time always. we never disppoint our clients. </p>
+                </div>
+            </div>
+        </div>
+        <div id="socials">
+            <a href=""><i class="fa fa-envelope">daviesfatimah97@gmail.com</i></a><br/>
+            <a href=""><i class="fa fa-facebook">Omowonuola Davies</i></a><br/>
+            <a href=""><i class="fa fa-twitter">Davies Fatimah</i></a><br/>
+            <a href=""><i class="fa fa-linkedin">Fatimah Davies</i></a><br/>
+            <a href=""><i class="fa fa-github">Fatimah Davies Omowonuola</i></a>
+        </div>
+    </div>
+
+    <!--skills and experience-->
+    <div class="skills-and-exp">
+        <!--work experience -->
+        <div id="exp-img">
+            <!--<h3 id="exp-text">01 <br/>Year of <br/>Experience</h3>-->
+        </div>
+        <!--skills and proficiency-->
+        <div id="skills">
+            <h1>My skills and proficiency</h1>
+            <p>This are the skills i have acquired and the levels i have attained in each of them is shown</p>
+
+            <!--skills and levels-->
+            <h2>HTML</h2>
+            <progress value="90" max="100" id="html">Intermediate</progress>
+            <h2>CSS</h2>
+            <progress value="80" max="100" id="html">Intermediate</progress>
+            <h2>Javascript</h2>
+            <progress value="50" max="100" id="html">Intermediate</progress>
+            <h2>Node.js</h2>
+            <progress value="10" max="100" id="html">Beginner</progress>
+            <h2>Wordpress</h2>
+            <progress value="20" max="100" id="html">Beginner</progress>
+            <h2>Figma</h2>
+            <progress value="30" max="100" id="html">Beginner</progress>
+            <div class="cv-and-works">
+                <a href="#about-me" id="cv-download">Hire me</a>
+                <a href="#" id="works">About Me</a>
+            </div>
+        </div>
+    </div>
+    <!--contact form-->
+    <div class="contact-me">
+        <h3>You Like What you see ?</h3>
+        <p>I'm Always ready to engage you in business conversations</p>
+        <form action="">
+            <input type="email" placeholder="Email Address" id="email"><br/>
+            <input type="text" placeholder="Name/Company" id="name"><br/>
+            <textarea placeholder="Your message" rows=15 cols=54 id="text-area"></textarea>
+            <button type="submit" id="btn-send"><i class="fa fa-envelope"></i> Hire Me</button>
+        </form>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
         body{
             margin:0 !important;
             padding: 0 !important;

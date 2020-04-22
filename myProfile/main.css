@@ -16,10 +16,12 @@ body{
   margin:0;
   width: 100%;  z-index: 99999;
   box-shadow: #ac8a8a;
-}  
+} 
+.nav-header a{
+    text-decoration: none;
+} 
 .nav-header h2{
     margin:20px 0 0 40px; color:rgb(172, 172, 11); padding:20px;
-    cursor: url("images/fatimah.jpg"), url("images/fatimah.jpg"), auto;
 }
 #slack-id{color:#ffffff;}
 nav{
@@ -178,6 +180,17 @@ footer{
 }
 footer p a{
     text-decoration: none; color:#ffffff; font-size:22px; margin:0px 10px;
+}
+#go-home{
+    font-size:20px; padding:10px; background-color: rgb(172, 172, 11); text-align: right;
+    border-radius: 50%; scroll-behavior: auto;
+}
+#go-home:active{
+    animation:slidetohome 2s linear;
+}
+@keyframes slidetohome{
+    0%{transform: translateY(200px);}
+  
 }
 @media screen and (max-width:600px){
     .nav-header{

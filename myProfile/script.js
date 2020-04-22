@@ -48,7 +48,7 @@ const showLinkToSite=()=>{
         siteIndex=0;
     }
 }
-setInterval(showLinkToSite, 4000);
+
 const showPrev=()=>{
     siteIndex--;
     if(siteIndex==siteLinks.length){
