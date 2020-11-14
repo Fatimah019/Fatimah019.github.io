@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fatimah Davies Front End Developer and Designer(User-Interfaces and Illustrations).</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="A web developer (Front End) and A designer(Illustrator and User-Interfaces) portfolio (Personal Website)">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <style>
+            body, html{
+                margin:0;
+                padding:0;
+                height:100%;
+                background-color:rgb(236, 231, 231, 0.3);
+                font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            #image-back{
+                width:100%;
+                height:300px;
+                justify-content: center;
+            }
+            .name{
+                color:rgb(247, 245, 241);
+                font-size:50px;
+                margin:auto;
+                font-weight:bolder;
+            }
+            .profession{
+                font-size:30px;
+                font-weight:bolder;
+            }
+
+            /*Nav section-----------------------------------*/
+            .nav-head{
+                width:100%;
+            }
+            .ul{
+                display:flex;
+                flex-direction: row;
+                margin:auto;
+                padding-left:10px;
+            }
+            
+            .li .nav-list{
+                background-color:transparent;
+                border:none;
+                font-size:18px;
+                outline:none;
+                padding-left:20px;
+            }
+
+            /*Profile page--------------------------------*/
+
+            .profile-row-1{
+                display: flex;
+                flex-direction: row;
+                width:80%;
+                margin:auto;
+            }
+            .about-me, .prof-pic{
+                width:50%;
+                margin:auto;
+                padding:10px;
+            }
+            .prof-pic{
+                text-align: center;
+            }
+            .about-me, .profile-row-2{
+                background-color:rgb(245, 246, 247);
+                box-shadow: 0px 4px 4px 0px rgba(18, 79, 170, 0.25);
+            }
+            .about-me p{
+                font-size: 18px;
+                padding:5px 15px 5px 15px;
+            }
+            .profile-row-2{
+                width:60%;
+                margin:auto;
+            }     
+            #skill-row{
+                display: flex;
+                flex-direction: row;
+                width:100%;
+                margin:auto;
+                padding-bottom: 20px;
+            }      
+            #skill-row-img{
+                height:10%;
+                width:45%;
+                margin:auto;
+            }
+            .profile-row-3{
+                display: flex;
+                flex-direction: row;
+                margin:auto;
+                width:80%;
+            }
+            .profile-row-3-col-1{
+                margin:auto;
+            }
+            .my-photo{
+                height:300px;
+                width:300px;
+                border-radius: 50%;
+            }
+            #work-experience{
+                display: flex;
+                flex-direction: column;
+            }
+            #work-experience li{
+                list-style-type: none;
+                font-size:20px;
+                width:100%;
+            }
+            #profile-btn{
+                border-bottom: 2px solid black;
+            }
+
+            /*Project page--------------------------------------*/
+
+            .project-row-1{
+                display: flex;
+                flex-direction: row;
+                width:80%;
+                margin:auto;
+            }
+            .project-row-1-col-1, .project-row-1-col-2{
+                width:50%;
+                margin:auto;
+                padding:10px;    
+            }
+            #project-image-back{
+                width:100%;
+            }
+            #webdev, #myprofile{
+                display: none;
+            }
+            #dropdown-list{
+                width:30%; background-color:rgb(245, 246, 247);
+                box-shadow: 0px 4px 4px 0px rgba(18, 79, 170, 0.25);
+                display: none;
+                margin: 0px 0px 10px 130px;
+            }
+            .icons-back{
+                background-image: url("https://res.cloudinary.com/dycyotaya/image/upload/v1579602089/back2_e8ebjp.jpg");
+                opacity:0.4;
+                background-size: cover;
+                height:400px;;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+            }
+
+            #webdev-btn, #design-btn{
+                color:#000000;
+                font-size:16px;
+                padding:10px;
+            }
+           
+           #designs, #webdev{
+               display:none;
+           }
+           #myprofile{
+               display: block;
+           }
+           .contactBtn{
+            background-color:transparent;
+           }
+
+            /*Contact page-----------------------------------------*/
+
+            #contact-head{
+            text-align: center;
+            font-size:22px;
+            }
+            #mycontact{
+                display: none;
+            }
+            form{
+                text-align: center;
+                padding-top:30px;
+            }
+            form input, textarea{
+                width:40%;
+                margin:auto;
+                padding:10px;
+                margin-bottom:15px;
+                margin-top:15px;
+                background-color: rgb(237, 238, 238);
+                border-radius: 5px;
+            }
+            textarea{
+                height:50%;
+                margin-top:15px;
+            }
+            #submit-btn{
+                background-color:rgb(10, 10, 10);
+                color:#ffffff;
+                border-radius: 10px;
+            }
+            .contact-row-2{
+                background-color:rgb(245, 246, 247);
+                box-shadow: 0px 4px 4px 0px rgba(18, 79, 170, 0.25);
+                width:60%;
+                margin:auto;
+                padding-bottom:5px;
+                text-align: center;
+                font-size:20px;
+            }
+            .fa-facebook, .fa-twitter, .fa-linkedin, .fa-github, .fa-figma, .fa-instagram{
+            color:rgb(4, 33, 97);
+            }
+            .contact-row-2 p a{
+            color:black;
+            }
+            a{
+                text-decoration: none;
+            }
+            /*-------------------------------------*/
+            .footer{
+                background-color: rgb(15, 15, 15);
+                color:rgb(255, 255, 255);
+                text-align: center;
+                font-size: 17px;
+                padding:1px;
+            }
+
+            /*media queries
+            ---------------------------------------------
+            ---------------------------------------------
+            */
+
+            /*screen width of 600px*/
+            @media screen and (max-width:600px){
+            .my-photo{
+                height:200px;
+                width:200px;
+                border-radius: 50%;
+            }
+            .profile-row-2, .profile-row-1, .profile-row-3{
+                width:90%;
+                margin:auto;
+            }
+            .profile-row-1 .about-me, .profile-row-3-col-1 .work-experience{
+                width:95%;
+            }
+            .profile-row-1, #webdev, #designs{
+                margin-top:20px;
+            }
+            .about-me p{
+                font-size: 17px;
+                padding:5px 25px 5px 25px;
+            }
+             .project-row-1, .profile-row-1, .profile-row-2, .profile-row-3{
+                flex-direction: column;
+            }
+            .project-row-1-col-1, .project-row-1-col-2, .about-me, .prof-pic, #webdev, #myprofile{
+                width:100%;
+                padding-left:0;
+                padding-right:0;
+            }
+            .project-row-1-col-1, .project-row-1-col-2, .about-me, .prof-pic, form input, textarea{
+                width:80%;
+            }
+            form{
+                padding-top:30px;
+            }
+            }
+
+            /*screen width of 420px*/
+            @media screen and (max-width:420px){
+            .li .nav-list{
+                font-size:15px;
+            }
+            .my-photo{
+                height:150px;
+                width:150px;
+                border-radius: 50%;
+            }
+            .profile-row-2, .profile-row-1, .profile-row-3, #mycontact, form, form input, textarea, .contact-row-2{
+                width:95%;
+                margin:auto;
+            }
+            .profile-row-1 .about-me, .profile-row-3-col-1 .work-experience, #webdev, #myprofile, .project-row-1{
+                width:100%;
+            }
+            .profile-row-1, #webdev, #designs{
+                margin-top:20px;
+            }
+            .project-row-1-col-1, .project-row-1-col-2, .about-me, .prof-pic, form input, textarea{
+                width:60%;
+            }
+            .project-row-1-col-1{
+                width:80%;
+            }
+            form input, textarea{
+                margin-bottom:10px;
+                margin-top:10px;
+            }
+            textarea{
+                margin-top:15px;
+            }
+            }
+
+            /*keyframes animation */
+            .profilePage{
+            animation-name:slide2;
+            animation-duration:0.2s;
+           }
+           .designsProject{
+            animation-name:slide3;
+            animation-duration:0.8s;
+           }
+           .webProject{
+            animation-name:slide4;
+            animation-duration:0.8s; 
+           }
+           .myContact{
+            animation-name:slide;
+            animation-duration:0.2s;
+           }
+
+           @keyframes slide{       
+           0% {
+            transform: translatex(-100px);
+        }
+        }
+          @keyframes slide2{       
+           0% {
+            transform: translatex(100px);
+        }
+        }
+          @keyframes slide3{       
+           0% {
+            transform: translatey(100px);
+        }
+        }
+          @keyframes slide4{       
+           0% {
+            transform: translatey(-100px);
+        }
+    }
+
+        </style>
+    </head>
+    <body>
+        <!--overall body-->
+        <div class="contaner-fluid-body">
+            <!--Title section-->
+            <div class="icons-back">
+                <div class="name" style="text-align: center;">Fatimah Davies <p class="profession">Front End Developer And UI Designer</p></div>    
+            </div>
+
+            <!--nav section-->
+            <div class="nav-head">
+                <div class="ul">
+                    <div class="li"><button class="nav-list" id="profile-btn">My Profile</button></div>
+                    <div class="li">
+                        <button class="nav-list" id="all-projects-btn">Projects</button> 
+                        <span><i class="fa fa-angle-down" id="dropdown-btn"></i></span>
+                    </div>
+                    <div class="li"><button class="nav-list" id="contact-btn">My Contact</button></div>
+                </div> 
+            </div>
+            <!--drop down option-->
+            <div id="dropdown-list">
+                <div class="li"><button class="nav-list" id="webdev-btn">Web Projects</button></div>
+                <div class="li"><button class="nav-list" id="design-btn">Design Projects</button></div>
+            </div>
+            <!--fourth row Profile page-->
+            <div id="myprofile">
+                    <!--first row-->
+                    <div class="profile-row-1">
+                        <div class="about-me"><p>My name is Fatimah Davies. A graduate of the Lagos State Polytechnic In Computer
+                             science department. I am a Font End Developer Who takes mobile responsiveness of web pages to heart. 
+                            I ensure Optimal Responsiveness of web pages</p></div>
+                        <div class="prof-pic"><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1572175377/my-photo_puy5gn.jpg" class="my-photo"></div>
+                    </div>
+                    <h2 style="text-align: center;">Skills</h2>
+                    <!--second row-->
+                    <div class="profile-row-2">                        
+                        <div id="skill-row">
+                            <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602274/htmllogo_oeztuq.png" id="skill-row-img" alt="html">
+                            <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602257/bootstrap-4_lqc4gu.svg" id="skill-row-img" alt="react">
+                        </div>
+                        <div id="skill-row">
+                            <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602257/bootstrap-4_lqc4gu.svg" id="skill-row-img" alt="bootstrap">
+                            <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602277/jquery-1_aik2un.svg" id="skill-row-img" alt="jquery">
+                        </div>
+                        <div id="skill-row">
+                            <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602276/javascript-1_wvgkns.svg" id="skill-row-img" alt="javascript">
+                            <img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602267/css-3_qawl2p.svg" id="skill-row-img" alt="css">
+                        </div>
+                    </div>
+                    <!--third row-->
+                    <div class="profile-row-3">           
+                        <div class="profile-row-3-col-1">
+                                <h2 style="text-align: center;">My Work Experience</h2>
+                            <ul id="work-experience">
+                                <li><h3>2013 LASUTH(Lagos State University Teaching Hospital) Intern</h3> <p><strong>Intern</strong></p>I learnt how to troubleshoot Faulty Systems. It was more of System's maintenance and networking. Crimpling of network cables, making sure computers are able to share resources within the organization<br/> 
+                            </p></li>
+                            <li style="padding-bottom:30px;"><h3>2019 HNG 6.0 Intern</h3> <p><strong>Front End Track</strong></p>I was able to collaborate with team members from different states
+                                remotely in which I participated in all weekly tasks that were assigned
+                                 to us. And I was able to take up the role of a team lead during the 3 months internship.<br/> 
+                               <strong>Certificate of proof: in view</strong></p></li>
+                            </ul>
+                        </div>
+                        <!--work experience-->
+                        <div class="profile-row-3-col-1">
+                            <ul id="work-experience">
+                                <li style="padding-bottom:30px;"><h3>2019 VGG Intern</h3> <p><strong>Front End Track</strong></p>I was able to collaborate with team members from different states
+                                    remotely in which I participated in all weekly tasks that were assigned
+                                     to us. And I was able to take up the role of a team lead during the 3 months internship.<br/> 
+                                   <strong>Certificate of proof: in view</strong></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="profile-row-4">
+                    </div>
+                    <div class="profile-row-5">
+                    </div> 
+                    -->
+                </div>
+        <!--contact me page-->
+        <div id="mycontact">
+            <h4 id="contact-head">For a 100% Guarantee on responsive websites and Amazing Designs be it Illustrations or User-Interfaces for your web Pages</br>I am definitely to be trusted. Just a Message and i will be at your service</h4>
+            <div class="contact-row-1">
+                <form method="POST" action="https://formspree.io/moqjykeo">
+                    <input type="text" placeholder="&#xF007; your full name" name="name"><br/>
+                    <input type="email" placeholder="&#xF0e0; Email Address" name="_replyto"><br/>
+                    <textarea rows="10" placeholder="Start Your Message" name="message"></textarea><br/>
+                    <input type="submit" id="submit-btn">
+                </form>
+            </div>
+            <div class="contact-row-2">
+                <h3>Reach out to me via</h3>
+                <p><a href="https://facebook.com/omowonuola-davies">Facebook</a></p>
+                <a href="https://facebook.com/omowonuola-davies"><i class="fa fa-facebook"></i></a>
+                <p><a href="https://twitter.com/daviesfatimah2">Twitter</a></p>
+                <a href="https://twitter.com/daviesfatimah2"><i class="fa fa-twitter"></i></a>
+                <p><a href="https://linkedin.com/in/fatimah-davies-5b34aa168">Linkedin</a></p>
+                <a href="https://linkedin.com/in/fatimah-davies-5b34aa168"><i class="fa fa-linkedin"></i></a>
+                <p><a href="https://instagram.com/teemah997/">Instagram</a></p>
+                <a href="https://instagram.com/teemah997/"><i class="fa fa-instagram"></i></a>
+
+                <h3>Check out my profiles</h3>
+                <p><a href="https://github.com/Fatimah019">Github</a></p>
+                <a href="https://github.com/Fatimah019"><i class="fa fa-github"></i></a>
+                <p><a href="https://figma.com/files/user/753690677879115057/Davies-Fatimah">Figma</a></p>
+                <a href="https://figma.com/files/user/753690677879115057/Davies-Fatimah"><i class="fa fa-figma"></i></a>
+            </div>
+        </div>
+        <!--second-row designs-->
+        <div id="designs">
+            <div class="project-row-1">
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602054/404page_e1wbjz.png" id="project-image-back" alt="design-1"></a><p>A 404Eror Page designed with figma (100 days UI challenge)</p></div>
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602298/profile2_lthzvi.jpg" id="project-image-back" alt="design-2"></a><p>Profile page UI design</p></div>
+            </div>
+            <div class="project-row-1">
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602292/natuedesktop_okwazw.jpg" id="project-image-back" alt="design-3"></a><p>An Illustration for nature. Birds being Habitants of anywhere, Land , Sea, and Air.</p></div>
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602285/littleangel_brkigk.jpg" id="project-image-back" alt="design-4"></a><p>An Illustration for kids being watched by their guardian angel. shows how innocent anfd peaceful they may be.</p></div>
+            </div>
+            <div class="project-row-1">
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602286/Lucid_Blog_prototype_Hng_first_task_iwmisj.jpg" id="project-image-back" alt="design-5"></a><p>A re-design of the Lucid Blog Page (HNG first task)</p></div>
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602286/Lucid_Blog_prototype_Hng_first_task_iwmisj.jpg" id="project-image-back" alt="design-6"></a><p>......</p></div>
+            </div>
+            <div class="project-row-1">
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602276/freedom2_qr8xd2.jpg" id="project-image-back" alt="design-7"></a><p>An Illustration for nature. Birds being Habitants of anywhere, Land , Sea, and Air.</p></div>
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602272/connectconnect_szmejc.jpg" id="project-image-back" alt="design-8"></a><p>UI design for a Chat Application Sign Up Page.</p></div>
+            </div>
+            <div class="project-row-1">
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602263/calculator2_tvha9r.jpg" id="project-image-back" alt="design-9"></a><p>UI design for a simple calculator (100 days UI challenge).</p></div>
+                <div class="project-row-1-col-1"><a href=""><img src="https://res.cloudinary.com/dycyotaya/image/upload/v1579602263/calculator2_tvha9r.jpg" id="project-image-back" alt="design-10"></a><p>......</p></div>
+            </div>
+        </div>
+        <!--third row websites-->
+            <div id="webdev">
+                <div class="project-row-1">
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/TodoList/todolist.html"><img src="images/todo.png" id="project-image-back"></a><p>A TodoList Web Application built with Html, Css and Javscript. <a href="https://fatimahdavies.netlify.com/TodoList/todolist.html">Go to site</a></p></div>
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavieswebdeveloper.netlify.com/technologyterms.html"><img src="images/techterms.png" id="project-image-back"></a><p>A TodoList Web Application built with Html, Css and Javscript. <a href="https://fatimahdavieswebdeveloper.netlify.com/technologyterms.html">Go to site</a></p></div>
+                </div>
+                <div class="project-row-1">
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/nuel/nuel-ng-bata.html"><img src="images/nuel.png" id="project-image-back"></a><p>A website for a shoe maker<a href="https://fatimahdavies.netlify.com/nuel-ng-bata.html">Go to site</a></p></div>
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/myrealportfolio.html"><img src="images/myportfolio.png" id="project-image-back"></a><p>A portfolio for a web developer and a designer: Ilusstrator and UI designer. Built with pure With HTML/CSS and Javascript <a href=" https://fatimahdavies.netlify.com/myrealportfolio.html">Go to site</a></p></div>
+                </div>
+                <div class="project-row-1">
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/taskmanager/taskmanager.html"><img src="images/tasktracker.png" id="project-image-back"></a><p>A task Managing Web Application With HTML/CSS and Javascript. <a href=" https://fatimahdavies.netlify.com/taskmanager/taskmanager.html">Go to site</a></p></div>
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/clock/digitalclock.html"><img src="images/digiclock.png" id="project-image-back"></a><p>A digital clock web application built with HTML/CSS and Javascript <a href="https://fatimahdavies.netlify.com/clock/digitalclock.html">Go to site</a></p></div>
+                </div>
+                <div class="project-row-1">
+                        <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/nuel/nuelbata.html"><img src="images/nuel.png" id="project-image-back"></a><p>A website for a shoe maker<a href="https://fatimahdavies.netlify.com/nuelbata.html">Go to site</a></p></div>
+                    <div class="project-row-1-col-1"><a href="https://fatimahdavies.netlify.com/calculator/calculator.html"><img src="images/calculator.png" id="project-image-back"></a><p>A task Managing Web Application With HTML/CSS and Javascript. <a href=" https://fatimahdavies.netlify.com/calculator/calculator.html">Go to site</a></p></div>
+                </div>
+            </div>
+
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <footer>
+                <p>Copyright<span id="date" style="margin-left:10px; margin-right: 10px;">Date</span>Fatimah_Designs</p>
+                <p>+234 708 878 0115 <span style="margin-left:10px;">Lagos, Nigeria.</span></p>
+            </footer>
+        </div>
+        <script>
+            function currentyear(){
+            var year=new Date();
+            var yearSpecific=year.getFullYear();
+            document.getElementById("date").innerHTML=yearSpecific ;
+            }
+            currentyear();
+
+            let designsProject=document.getElementById("designs");
+            let webdevProject=document.getElementById("webdev");
+            let profilepage=document.getElementById("myprofile");
+            let myContact=document.getElementById("mycontact");
+            let dropdownList=document.getElementById("dropdown-list");
+
+            let designBtn=document.getElementById("design-btn");
+            let webdevBtn=document.getElementById("webdev-btn");
+            let profilepageBtn=document.getElementById("profile-btn");
+            let contactBtn=document.getElementById("contact-btn");
+            let dropdownBtn=document.getElementById("dropdown-btn");
+            let allprojectsBtn=document.getElementById("all-projects-btn");
+
+            designBtn.onclick=function(){
+            designsProject.style.display="block";
+            webdevProject.style.display="none";
+            profilepage.style.display="none";
+            myContact.style.display="none";
+            webdevBtn.style.borderBottom="none";
+            profilepageBtn.style.borderBottom="none";
+            contactBtn.style.borderBottom="none";
+            dropdownList.style.display="none";
+            allprojectsBtn.style.borderBottom="2px solid black";
+            allprojectsBtn.textContent="Designs"
+            designsProject.className="designsProject";
+           }
+           dropdownBtn.onclick=function(){
+               if (dropdownList.style.display==="block"){
+                dropdownList.style.display="none";
+
+               }
+                else{
+                    dropdownList.style.display="block";
+                    allprojectsBtn.style.borderBottom="2px solid black";
+                    contactBtn.style.borderBottom="none";
+                    designBtn.style.borderBottom="none";
+                    webdevBtn.style.borderBottom="none";
+                    profilepageBtn.style.borderBottom="none";
+                }
+           } 
+
+            webdevBtn.onclick=function(){
+            designsProject.style.display="none";
+            webdevProject.style.display="block";
+            profilepage.style.display="none";
+            myContact.style.display="none";
+            designBtn.style.borderBottom="none";
+            profilepageBtn.style.borderBottom="none";
+            contactBtn.style.borderBottom="none";
+            dropdownList.style.display="none";
+            allprojectsBtn.style.borderBottom="2px solid black";
+            allprojectsBtn.textContent="Web"
+            webdevProject.className="webProject";
+           }
+           profilepageBtn.onclick=function(){
+            profilepage.style.display="block";
+            designsProject.style.display="none";
+            webdevProject.style.display="none";
+            myContact.style.display="none";
+            profilepageBtn.style.borderBottom="2px solid black";
+            webdevBtn.style.borderBottom="none";
+            designBtn.style.borderBottom="none";
+            contactBtn.style.borderBottom="none";
+            dropdownList.style.display="none";
+            allprojectsBtn.style.borderBottom="none";
+            profilepage.className="profilePage"
+            allProjects.className="allProjects";
+            allprojectsBtn.textContent="Projects";
+           }
+           contactBtn.onclick=function(){
+            myContact.style.display="block";
+            designsProject.style.display="none";
+            webdevProject.style.display="none";
+            profilepage.style.display="none";
+            contactBtn.style.borderBottom="2px solid black";
+            designBtn.style.borderBottom="none";
+            webdevBtn.style.borderBottom="none";
+            profilepageBtn.style.borderBottom="none";
+            dropdownList.style.display="none";
+            allprojectsBtn.style.borderBottom="none";
+            myContact.className="myContact";
+            allprojectsBtn.textContent="Projects";
+           }
+            
+
+        </script>
+
+    </body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5e0c835827773e0d832b63ca/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</html>
+
+

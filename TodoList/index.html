@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>to do</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="todoList.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="component-1" id="component-1">
+                <div class="icon-1"><i class="fa fa-pencil"></i><span class="icon-2"><i class="fa fa-calendar"></i></span></div>
+            </div>
+            <div class="component-2" id="component-2">
+                <div id="full-date">
+                    <h2 id="day">23</h2>
+                    <p id="day-words">
+                        <p id="today">Today</p><br/>
+                        <p id="month">August<span id="year">2020</span></p>
+                    </p>
+                </div>
+            </div>
+            <div class="component-3" id="component-3">
+                <i class="fa fa-book" id="goto-read"><span id="completed-read">0</span><span>/</span><span id="num-task">0</span></i>
+                <i class="fa fa-bicycle" id="goto-exercise"><span id="completed-exercise">0</span><span>/</span><span id="showExerciseTaskNum">0</span></i>
+                <i class="fa fa-beer" id="goto-drink"><span id="completed-drink">0</span><span>/</span><span id="showDrinkTaskNum">0</span></i>
+            </div>
+            <div class="component-4"  id="component-4">
+                <p id="current-day">TODAY</p>
+                <div id="empty-list-display"><i>empty list</i></div>
+                <div id="all-lists">
+                <div id="list"> 
+                </div> 
+                
+                </div> 
+            </div>
+            <div class="component-5" id="read">
+                <div id="hang-in"><i class="fa fa-book hang-in-book"></i></div>
+                <div id="close-book"><i class="fa fa-close"></i></div>
+                <div class="add-task-div">
+                    <label>Task name</label><br/>
+                    <input type="text" placeholder="add a task" id="input"><br>
+                    <label>how long</label><br>
+                    <input type="text" placeholder="how long" id="howlong"><br>
+                    <button type="button" id="add-task-btn-book">LET'S GO</button>
+                </div>
+            </div>
+            <div class="component-6" id="exercise">
+                <div id="hang-in"><i class="fa fa-bicycle hang-in-exercise"></i></div>
+                <div id="close-exercise"><i class="fa fa-close"></i></div>
+                <div class="add-task-div">
+                    <label>Task name</label><br/>
+                    <input type="text" placeholder="add a task" id="input3"><br>
+                    <label>how long</label><br>
+                    <input type="text" placeholder="how long" id="howlong-3"><br>
+                    <button type="button" id="add-task-btn-exercise">LET'S GO</button>
+                </div>
+            </div>
+            <div class="component-6" id="drink">
+                <div id="hang-in"><i class="fa fa-beer hang-in-drink"></i></div>
+                <div id="close-drink"><i class="fa fa-close"></i></div>
+                <div class="add-task-div">
+                    <label>Task name</label><br/>
+                    <input type="text" placeholder="add a task" id="input2"><br>
+                    <label>how long</label><br>
+                    <input type="text" placeholder="how long" id="howlong-2"><br>
+                    <button type="button" id="add-task-btn-drink">LET'S GO</button>
+                </div>
+            </div>
+
+        </div>
+        <script src="todoList.js"></script>
+    </body>
+</html>
+

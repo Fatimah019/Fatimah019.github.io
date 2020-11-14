@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+    </head>
+    <style>
+        .container{
+            background-color: black;
+            margin:auto;
+            width:40%;
+        }
+        #form{
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding:15px;
+        }
+        #display{
+            background:rgba(225, 225, 225, 0.4);
+            padding:5px;
+            width: 70%;
+            outline-color: transparent;
+            font-size:20px;
+            color:#ffffff;
+        }
+        #display-answer{
+            background: none;
+            border-color:transparent;
+            color:#ffffff;
+            font-size:20px;
+            padding:5px;
+            width: 70%;
+            animation: slide2 2.0s;
+        }
+        .row{
+            display:flex;
+            flex-direction: row;
+            padding:10px;
+            margin:auto;
+            width: 80%;
+        }
+        .row input{
+            padding:10px;
+            margin: auto;
+            width:15%;
+            animation: slide 2.0s;
+        }
+        h2{
+            text-align: center;
+        }
+        #sin, #cos, #tan{
+            display: none;
+        }
+        /*Keyframes transition*/
+
+        @keyframes slide{
+           0%{ transform:translateX(-100px)}
+
+        }
+        @keyframes slide2{
+           0%{ transform:translateY(-100px)}
+
+        }
+        
+    </style>
+    <body>
+            <h2>A Simple Calclator</h2>
+        <div class="container">
+            <form name="calculator" id="form">
+                <!--display area of input and output-->
+                <input type="text" name="display" id="display" placeholder="0">
+                <input type="text" name="displayanswer" id="display-answer">
+                <!--buttons to click on-->
+
+                <!--first row-->
+                <div class="row">
+                        <input name="squareroot" type="button" id="squareroot" value="sqrt" onclick="calculator.displayanswer.value=Math.sqrt(eval(calculator.display.value))"></input>
+                    <input name="delete" type="button" value="x" onclick="calculator.display.value=calculator.display.value.slice(0, calculator.display.value.length-1)"></input>
+                    <input name="clearall" type="button" value="Del" onclick="calculator.display.value=eval(calculator.display.value=null)"></input>
+                    <input name="round" type="button" id="round" value="R" onclick="calculator.displayanswer.value=Math.round(eval(calculator.display.value))"></input>
+                </div>               
+                <!--second row-->
+                <div class="row">
+                    <input name="seven" type="button" value="7" onclick="calculator.display.value+='7'"></input>
+                    <input name="eight" type="button" value="8" onclick="calculator.display.value+='8'"></input>
+                    <input name="nine" type="button" value="9" onclick="calculator.display.value+='9'"></input>
+                    <input name="divide" type="button" value="/" onclick="calculator.display.value+='/'"></input>
+                    <input name="cos" id="cos" type="button" value="cos" onclick="calculator.display.value=Math.cos(eval(calculator.display.value))"></input>
+                </div>
+                <!--third row-->
+                <div class="row">
+                    <input name="four" type="button" value="4" onclick="calculator.display.value+='4'"></input>
+                    <input name="five" type="button" value="5" onclick="calculator.display.value+='5'"></input>
+                    <input name="six" type="button" value="6" onclick="calculator.display.value+='6'"></input>
+                    <input name="multiply" type="button" value="*" onclick="calculator.display.value+='*'"></input>
+                    <input name="sin" id="sin" type="button" value="sin" onclick="calculator.display.value=Math.sin(eval(calculator.display.value))"></input>
+                </div>
+                <!--fourth row-->
+                <div class="row">
+                    <input name="one" type="button" value="1" onclick="calculator.display.value+='1'"></input>
+                    <input name="two" type="button" value="2" onclick="calculator.display.value+='2'"></input>
+                    <input name="three" type="button" value="3" onclick="calculator.display.value+='3'"></input>
+                    <input name="minus" type="button" value="-" onclick="calculator.display.value+='-'"></input>
+                    <input name="tan" id="tan" type="button" value="tan" onclick="calculator.display.value=Math.tan(eval(calculator.display.value))"></input>
+                </div>
+                <!--fifth row-->
+                <div class="row">
+                    <input name="decimalpoint" type="button" value="." onclick="calculator.display.value+='.'"></input>
+                    <input name="zero" type="button" value="0" onclick="calculator.display.value+='0'"></input>
+                    <input name="equal" id="equal" type="button" value="=" onclick="calculator.displayanswer.value=eval(calculator.display.value)"></input>
+                    <input name="plus" type="button" value="+" onclick="calculator.display.value+='+'"></input>
+                </div>
+                <input name="switch" id="switch" type="button" value=">"></input>
+            </form>
+        </div>
+
+        <script>
+            let sinebtn=document.getElementById("sin");
+            let cosbtn=document.getElementById("cos");
+            let tanbtn=document.getElementById("tan");
+            
+            const switchPage=()=>{
+                if (tanbtn.style.display==="block"){
+                    document.plus.style.display="block";
+                    document.minus.style.display="block";
+                    sinebtn.style.display="block";
+                }
+            }
+            let switchpage=document.getElementById("switch").addEventListener("click", switchPage);
+
+        </script>
+    </body>
+</html>

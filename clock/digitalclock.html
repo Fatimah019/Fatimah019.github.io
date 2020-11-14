@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8" http-equiv="encoding">
+        <head>
+                <meta charset="UTF-8" http-equiv="encoding"/>
+                <meta name="viewport"content="width=device-width, initial-scale=1"/>
+                <meta http-equiv="X-UA-Compatible" content="le=edge"/>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+                <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+                <link  rel="stylesheet" href="main.css">
+
+        <title>
+            my first js clock
+        </title>
+        <style>
+#body{
+    background-color: black;
+}
+#clock{
+    background-color:rgb(37, 24, 107);
+    box-shadow: 30px aqua;
+    height:500px;
+    width:500px;
+    position:relative;
+    border-radius: 50%;
+    border: 20px solid white;
+    margin:2em auto;
+}
+
+/*hands*/
+#twelve{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:49%;
+    position:absolute;
+}
+#one{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:70%;
+    top:4.5%;
+    transform:rotate(30deg);
+    position:absolute;
+}
+#two{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:88.5%;
+    top:21%;
+    transform:rotate(60deg);
+    position:absolute;
+}
+#three{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:96%;
+    top:45%;
+    transform:rotate(90deg);
+    position:absolute;
+}
+#four{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:90%;
+    top:69%;
+    transform:rotate(120deg);
+    position:absolute;
+}
+#five{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:73%;
+    top:86%;
+    transform:rotate(-30deg);
+    position:absolute;
+}
+#six{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:50%;
+    top:92.5%;
+    position:absolute;
+}
+#seven{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:25%;
+    top:86%;
+    transform:rotate(30deg);
+    position:absolute;
+}
+#eight{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:9%;
+    top:69%;
+    transform:rotate(-120deg);
+    position:absolute;
+}
+#nine{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:3%;
+    top:45%;
+    transform:rotate(90deg);
+    position:absolute;
+}
+#ten{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:10.5%;
+    top:21%;
+    transform:rotate(-60deg);
+    position:absolute;
+}
+#eleven{
+    background-color:white;
+    height:35px;
+    width:5px;
+    left:28%;
+    top:5%;
+    transform:rotate(-30deg);
+    position:absolute;
+}
+#dot{
+    
+    height:15px;
+    width:15px;
+    border-radius: 50%;
+    position:absolute;
+    margin:45.8%;
+}
+#sec-hand{
+    background-color:black;
+    width: 2px;
+    height: 130px;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 95px;
+    left: 230px;
+    transition: all 0.06s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: 2;  
+    transform: rotate(360deg);
+}
+#hour-hand{
+    background-color:white;
+    width: 10px;
+    height: 75px;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 153px;
+    left: 225px;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.0083, 1);
+    z-index: 10;
+    transform: rotate(360deg);
+}
+#min-hand{
+    background-color:white;
+    width: 5px;
+    height: 120px;
+    transform-origin: bottom center;
+    border-radius: 4px;
+    position: absolute;
+    top: 105px;
+    left: 227px;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    z-index: 3;
+    transform: rotate(90deg);
+}
+
+/*keyframes transition*/
+@keyframes dateandtime {
+    0%   {color: rgb(141, 46, 128);}
+    25%  {color: rgb(172, 172, 66);}
+    50%  {color: rgb(68, 68, 139);}
+    100% {color: rgb(52, 107, 52);}
+}
+#time, #date{
+    height:100px;
+    width:7px;
+    position:absolute;
+    margin:5px;
+    text-align: center;
+    font-size:30px;
+    color:rgb(180, 23, 23);
+    transform:rotate(5deg);
+    margin-left:11%;
+    animation-name: dateandtime;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+#time-and-date{
+    position:absolute;
+    background-color:rgba(3, 4, 5, 0.2);
+    box-shadow: 5px antiquewhite;
+    height:80px;
+    width:200px;
+    margin-top:66%;
+    margin-left:25%;
+}
+
+  </style>
+        
+    </head>
+    <body id="body">
+  
+        <div class="container" id="clock">
+            <section id="twelve"></section>
+            <section id="eleven"></section>
+            <section id="ten"></section>
+            <section id="nine"></section>
+            <section id="eight"></section>
+            <section id="seven"></section>
+            <section id="six"></section>
+            <section id="five"></section>
+            <section id="four"></section>
+            <section id="three"></section>
+            <section id="two"></section>
+            <section id="one"></section>
+
+            <section id="dot"></section>
+            <section id="sec-hand"></section>
+            <section id="hour-hand"></section>
+            <section id="min-hand"></section>
+
+        <div id="time-and-date"> 
+    <p id="time"></p><br/>
+    <p id="date"></p>
+</div>
+
+<script>
+    var Hourhand=document.querySelector("#hour-hand");
+    var Secondhand=document.querySelector("#sec-hand");
+    var Minutehand=document.querySelector("#min-hand");
+    
+    function displayCurrentTime(){
+    var newDate = new Date();
+    var s = newDate.getSeconds();
+    var m = newDate.getMinutes();
+    var h = newDate.getHours();
+   
+    s = setTimeOutlook(s);
+    m = setTimeOutlook(m);
+    h = setTimeOutlook(h);
+
+    document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+    document.getElementById("date").innerHTML=newDate.toLocaleDateString();
+
+    var hour_pos=((h / 12 ) * 360 ); 
+    var min_pos=((m / 60) * 360); 
+    var sec_pos=((s / 60) * 360) + 360; 
+
+    Hourhand.style.transform=`rotate(${hour_pos}deg)`;
+    Secondhand.style.transform=`rotate(${sec_pos}deg)`;
+    Minutehand.style.transform=`rotate(${min_pos}deg)`;
+}
+
+function setTimeOutlook(time){
+    if(time<10){
+        time="0"+time;
+    };
+    return time;
+}
+
+setInterval(displayCurrentTime, 1000);
+        </script>
+    </body>
+</html>
